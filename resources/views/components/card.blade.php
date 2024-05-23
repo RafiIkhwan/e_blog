@@ -1,10 +1,10 @@
 <div class="max-w-sm bg-white border border-gray-200 shadow">
-  <a href="#">
-    <img class="h-60 w-full object-cover object-center" src={{ $cover }} alt="" />
+  <a href="/article/{{ $slug }}">
+    <img class="h-60 w-full object-cover object-center" src={{ '/images/' . $cover }} alt="" />
   </a>
   <div class="p-5">
     <p class="text-xs mb-3">{{ $date }}</p>
-    <a href="#">
+    <a href="/article/{{ $slug }}">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 line-clamp-2">{{ $title }}</h5>
     </a>
     <p class="mb-3 font-normal text-gray-700 line-clamp-3">{{ $content }}</p>

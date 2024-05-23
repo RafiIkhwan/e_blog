@@ -11,8 +11,21 @@ class Article extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'cover',
         'author',
         'content'
     ];
+
+    public static function orderByDesc() {
+        return static::query()->orderBy('created_at', 'desc')->get();
+    }
+
+    public static function findByAuthor($name) {
+        return static::where('author', $name)->get();
+    }
+
+    public static function findBySlug($slug) {
+        return static::where('slug', $slug)->first();
+    }
 }

@@ -6,7 +6,7 @@
   <x-header :headings="$heading"/>
   <div class="my-8">
     <h1 class="text-xs font-semibold">RECENT ARTICLE</h1>
-    <div class="grid grid-cols-4 gap-8 py-8">
+    <div class="grid xl:grid-cols-4 md:grid-cols-2 gap-8 py-8">
       @foreach ($articles as $article)
         <x-card 
         :cover="$article->cover" 
